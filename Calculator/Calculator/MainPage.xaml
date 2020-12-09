@@ -3,22 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Calculator.MainPage">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
+    <Grid  HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource BackgroudColor}" ColumnSpacing="1" RowSpacing="1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Entry Grid.ColumnSpan="4" Keyboard="Numeric" Style="{StaticResource EntryStyle}" Placeholder="0"/>
+
+        <Button Grid.Row="1"  BackgroundColor="{StaticResource DarkGray}"  Grid.Column="0" Text="AC" />
+        <Button Grid.Row="1" BackgroundColor="{StaticResource DarkGray}" Grid.Column="1" Text="+/-" />
+        <Button Grid.Row="1" BackgroundColor="{StaticResource DarkGray}" Grid.Column="2" Text="%" />
+        <Button Grid.Row="1" BackgroundColor="{StaticResource Orange}" Grid.Column="3" Text="÷" />
+
+        <Button Grid.Row="2" BackgroundColor="{StaticResource LigthGray}" Grid.Column="0" Text="7" />
+        <Button Grid.Row="2" BackgroundColor="{StaticResource LigthGray}" Grid.Column="1" Text="8" />
+        <Button Grid.Row="2" BackgroundColor="{StaticResource LigthGray}" Grid.Column="2" Text="9" />
+        <Button Grid.Row="2" BackgroundColor="{StaticResource Orange}" Grid.Column="3" Text="X" />
+
+        <Button Grid.Row="3" BackgroundColor="{StaticResource LigthGray}" Grid.Column="0" Text="4" />
+        <Button Grid.Row="3" BackgroundColor="{StaticResource LigthGray}" Grid.Column="1" Text="5" />
+        <Button Grid.Row="3" BackgroundColor="{StaticResource LigthGray}" Grid.Column="2" Text="6" />
+        <Button Grid.Row="3" BackgroundColor="{StaticResource Orange}" Grid.Column="3" Text="-" />
+
+        <Button Grid.Row="4" BackgroundColor="{StaticResource LigthGray}" Grid.Column="0" Text="1" />
+        <Button Grid.Row="4" BackgroundColor="{StaticResource LigthGray}" Grid.Column="1" Text="2" />
+        <Button Grid.Row="4" BackgroundColor="{StaticResource LigthGray}" Grid.Column="2" Text="3" />
+        <Button Grid.Row="4" BackgroundColor="{StaticResource Orange}" Grid.Column="3" Text="+" />
+    </Grid>
 
 </ContentPage>

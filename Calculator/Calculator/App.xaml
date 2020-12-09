@@ -3,6 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Calculator.App">
     <Application.Resources>
+        <Color x:Key="BackgroudColor">#323233</Color>
+        <Color x:Key="DarkGray">#444645</Color>
+        <Color x:Key="LigthGray">#646365</Color>
+        <Color x:Key="Orange">#f2a23c</Color>
+        <Color x:Key="TextColor">#e7e7e7</Color>
 
+        <!--Default Button Style-->
+        <Style TargetType="Button">
+            <Setter Property="TextColor" Value="{StaticResource TextColor}"/>
+            <Setter Property="FontSize" Value="Large"/>
+            <Setter Property="CornerRadius" Value="0"/>
+        </Style>
+
+        <!--Entry Style-->
+        <Style TargetType="Entry" x:Key="EntryStyle">
+            <Setter Property="BackgroundColor" Value="{StaticResource BackgroudColor}"/>
+            <Setter Property="HorizontalTextAlignment" Value="End"/>
+            <Setter Property="FontSize" Value="70"/>
+            <Setter Property="TextColor" Value="{StaticResource TextColor}"/>
+        </Style>
     </Application.Resources>
 </Application>
